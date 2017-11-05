@@ -13,6 +13,15 @@ import br.com.samuelweb.efd.contribuicoes.registros.blocoF.BlocoF;
 import br.com.samuelweb.efd.contribuicoes.registros.blocoI.BlocoI;
 import br.com.samuelweb.efd.contribuicoes.registros.blocoM.BlocoM;
 import br.com.samuelweb.efd.contribuicoes.registros.blocoP.BlocoP;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBloco0;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBloco1;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoA;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoC;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoD;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoF;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoI;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoM;
+import br.com.samuelweb.efd.contribuicoes.registros.contadores.ContadoresBlocoP;
 
 /**
  * @author Yuri Lemes
@@ -31,7 +40,30 @@ public class EfdContribuicoes {
 	private BlocoM blocoM;
 	private BlocoP blocoP;
 
-	// TODO Contadores
+	private ContadoresBloco0 contadoresBloco0;
+	private ContadoresBlocoA contadoresBlocoA;
+	private ContadoresBlocoC contadoresBlocoC;
+	private ContadoresBlocoD contadoresBlocoD;
+	private ContadoresBlocoF contadoresBlocoF;
+	private ContadoresBlocoI contadoresBlocoI;
+	private ContadoresBlocoM contadoresBlocoM;
+	private ContadoresBlocoP contadoresBlocoP;
+	private ContadoresBloco1 contadoresBloco1;
+
+	/**
+	 * 
+	 */
+	public EfdContribuicoes() {
+		this.contadoresBloco0 = new ContadoresBloco0();
+		this.contadoresBlocoA = new ContadoresBlocoA();
+		this.contadoresBlocoC = new ContadoresBlocoC();
+		this.contadoresBlocoD = new ContadoresBlocoD();
+		this.contadoresBlocoF = new ContadoresBlocoF();
+		this.contadoresBlocoI = new ContadoresBlocoI();
+		this.contadoresBlocoM = new ContadoresBlocoM();
+		this.contadoresBlocoP = new ContadoresBlocoP();
+		this.contadoresBloco1 = new ContadoresBloco1();
+	}
 
 	/**
 	 * @return the bloco0
@@ -181,6 +213,69 @@ public class EfdContribuicoes {
 	 */
 	public void setBlocoP(BlocoP blocoP) {
 		this.blocoP = blocoP;
+	}
+
+	/**
+	 * @return the contadoresBloco0
+	 */
+	public ContadoresBloco0 getContadoresBloco0() {
+		return contadoresBloco0;
+	}
+
+	/**
+	 * @return the contadoresBlocoA
+	 */
+	public ContadoresBlocoA getContadoresBlocoA() {
+		return contadoresBlocoA;
+	}
+
+	/**
+	 * @return the contadoresBlocoC
+	 */
+	public ContadoresBlocoC getContadoresBlocoC() {
+		return contadoresBlocoC;
+	}
+
+	/**
+	 * @return the contadoresBlocoD
+	 */
+	public ContadoresBlocoD getContadoresBlocoD() {
+		return contadoresBlocoD;
+	}
+
+	/**
+	 * @return the contadoresBlocoF
+	 */
+	public ContadoresBlocoF getContadoresBlocoF() {
+		return contadoresBlocoF;
+	}
+
+	/**
+	 * @return the contadoresBlocoI
+	 */
+	public ContadoresBlocoI getContadoresBlocoI() {
+		return contadoresBlocoI;
+	}
+
+	/**
+	 * @return the contadoresBlocoM
+	 */
+	public ContadoresBlocoM getContadoresBlocoM() {
+		return contadoresBlocoM;
+	}
+
+	/**
+	 * @return the contadoresBlocoP
+	 */
+	public ContadoresBlocoP getContadoresBlocoP() {
+		return contadoresBlocoP;
+	}
+
+	/**
+	 * @return the contadoresBloco1
+	 */
+	public ContadoresBloco1 getContadoresBloco1() {
+		return contadoresBloco1;
 	}
 
 }

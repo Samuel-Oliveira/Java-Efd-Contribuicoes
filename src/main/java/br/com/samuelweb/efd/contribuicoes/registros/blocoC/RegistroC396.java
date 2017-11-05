@@ -117,7 +117,7 @@ public class RegistroC396 {
 	/**
 	 * @return the alis_pis_percentual
 	 */
-	public String getAlis_pis_percentual() {
+	public String getAliq_pis_percentual() {
 		return alis_pis_percentual;
 	}
 

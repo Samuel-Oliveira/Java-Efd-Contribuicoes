@@ -226,7 +226,7 @@ public class RegistroC175 {
 	/**
 	 * @return the aliq_cofins_quant
 	 */
-	public String getAliq_cofins_quant() {
+	public String getAliq_cofins_reais() {
 		return aliq_cofins_quant;
 	}
 

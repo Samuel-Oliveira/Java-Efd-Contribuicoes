@@ -56,7 +56,7 @@ public class RegistroC380 {
 	/**
 	 * @return the dt_cod_fin
 	 */
-	public String getDt_cod_fin() {
+	public String getDt_doc_fin() {
 		return dt_cod_fin;
 	}
 

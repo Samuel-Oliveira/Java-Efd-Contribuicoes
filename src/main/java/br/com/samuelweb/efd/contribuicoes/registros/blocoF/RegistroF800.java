@@ -78,7 +78,7 @@ public class RegistroF800 {
 	/**
 	 * @return the per_cred_pis
 	 */
-	public String getPer_cred_pis() {
+	public String getPer_cred_cis() {
 		return per_cred_pis;
 	}
 

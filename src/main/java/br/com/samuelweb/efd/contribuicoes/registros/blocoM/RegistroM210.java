@@ -137,7 +137,7 @@ public class RegistroM210 {
 	/**
 	 * @return the vl_ajust_acres
 	 */
-	public String getVl_ajust_acres() {
+	public String getVl_ajus_acres() {
 		return vl_ajust_acres;
 	}
 
@@ -152,7 +152,7 @@ public class RegistroM210 {
 	/**
 	 * @return the vl_ajust_reduc
 	 */
-	public String getVl_ajust_reduc() {
+	public String getVl_ajus_reduc() {
 		return vl_ajust_reduc;
 	}
 

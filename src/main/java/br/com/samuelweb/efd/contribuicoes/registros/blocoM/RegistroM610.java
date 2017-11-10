@@ -77,7 +77,7 @@ public class RegistroM610 {
 	/**
 	 * @return the aliq_pis_percentual
 	 */
-	public String getAliq_pis_percentual() {
+	public String getAliq_cofins_percentual() {
 		return aliq_pis_percentual;
 	}
 
@@ -92,7 +92,7 @@ public class RegistroM610 {
 	/**
 	 * @return the quant_bc_pis
 	 */
-	public String getQuant_bc_pis() {
+	public String getQuant_bc_cofins() {
 		return quant_bc_pis;
 	}
 
@@ -107,7 +107,7 @@ public class RegistroM610 {
 	/**
 	 * @return the aliq_pis_reais
 	 */
-	public String getAliq_pis_reais() {
+	public String getAliq_cofins_reais() {
 		return aliq_pis_reais;
 	}
 
@@ -137,7 +137,7 @@ public class RegistroM610 {
 	/**
 	 * @return the vl_ajust_acres
 	 */
-	public String getVl_ajust_acres() {
+	public String getVl_ajus_acres() {
 		return vl_ajust_acres;
 	}
 
@@ -152,7 +152,7 @@ public class RegistroM610 {
 	/**
 	 * @return the vl_ajust_reduc
 	 */
-	public String getVl_ajust_reduc() {
+	public String getVl_ajus_reduc() {
 		return vl_ajust_reduc;
 	}
 

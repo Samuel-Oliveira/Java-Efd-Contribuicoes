@@ -52,7 +52,7 @@ public class RegistroM115 {
 	/**
 	 * @return the dt_bc_cred
 	 */
-	public String getDt_bc_cred() {
+	public String getDet_bc_cred() {
 		return dt_bc_cred;
 	}
 

@@ -17,7 +17,7 @@ public class Registro1600 {
 	private String nat_cont_rec;
 	private String vl_cont_apur;
 	private String vl_cred_cofins_desc;
-	private String vl_out_dev;
+	private String vl_cont_dev;
 	private String vl_out_ded;
 	private String vl_cont_ext;
 	private String vl_mul;
@@ -89,16 +89,16 @@ public class Registro1600 {
 	/**
 	 * @return the vl_out_dev
 	 */
-	public String getVl_out_dev() {
-		return vl_out_dev;
+	public String getVl_cont_dev() {
+		return vl_cont_dev;
 	}
 
 	/**
-	 * @param vl_out_dev
-	 *            the vl_out_dev to set
+	 * @param vl_cont_dev
+	 *            the vl_cont_dev to set
 	 */
-	public void setVl_out_dev(String vl_out_dev) {
-		this.vl_out_dev = vl_out_dev;
+	public void setVl_cont_dev(String vl_out_dev) {
+		this.vl_cont_dev = vl_out_dev;
 	}
 
 	/**

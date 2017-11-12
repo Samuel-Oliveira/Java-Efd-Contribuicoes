@@ -69,7 +69,7 @@ public class RegistroP200 {
 	/**
 	 * @return the vl_tot_j_acres
 	 */
-	public String getVl_tot_j_acres() {
+	public String getVl_tot_aj_acres() {
 		return vl_tot_j_acres;
 	}
 

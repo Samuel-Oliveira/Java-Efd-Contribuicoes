@@ -6,6 +6,7 @@ package br.com.samuelweb.efd.contribuicoes.bo.blocoF;
 import br.com.samuelweb.efd.contribuicoes.registros.EfdContribuicoes;
 import br.com.samuelweb.efd.contribuicoes.registros.blocoF.BlocoF;
 import br.com.samuelweb.efd.contribuicoes.registros.blocoF.BlocoFEnum;
+import br.com.samuelweb.efd.contribuicoes.registros.blocoF.RegistroF990;
 import br.com.samuelweb.efd.contribuicoes.util.Util;
 
 /**
@@ -107,7 +108,7 @@ public class GerarBlocoF {
 								efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF210);
 							});
 						}
-						
+
 						// REGISTROF211
 						if (!Util.isEmpty(registroF200.getRegistroF211())) {
 							registroF200.getRegistroF211().stream().forEach(registroF211 -> {
@@ -117,7 +118,118 @@ public class GerarBlocoF {
 						}
 					});
 				}
+
+				// REGISTROF500
+				if (!Util.isEmpty(registroF010.getRegistroF500())) {
+					registroF010.getRegistroF500().stream().forEach(registroF500 -> {
+						sb = GerarRegistroF500.gerar(registroF500, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF500);
+
+						// REGISTROF509
+						if (!Util.isEmpty(registroF500.getRegistroF509())) {
+							registroF500.getRegistroF509().stream().forEach(registroF509 -> {
+								sb = GerarRegistroF509.gerar(registroF509, sb);
+								efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF509);
+							});
+						}
+
+					});
+				}
+
+				// REGISTROF510
+				if (!Util.isEmpty(registroF010.getRegistroF510())) {
+					registroF010.getRegistroF510().stream().forEach(registroF510 -> {
+						sb = GerarRegistroF510.gerar(registroF510, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF510);
+
+						// REGISTROF519
+						if (!Util.isEmpty(registroF510.getRegistroF519())) {
+							registroF510.getRegistroF519().stream().forEach(registroF519 -> {
+								sb = GerarRegistroF519.gerar(registroF519, sb);
+								efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF519);
+							});
+						}
+
+					});
+				}
+
+				// REGISTROF525
+				if (!Util.isEmpty(registroF010.getRegistroF525())) {
+					registroF010.getRegistroF525().stream().forEach(registroF525 -> {
+						sb = GerarRegistroF525.gerar(registroF525, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF525);
+
+					});
+				}
+
+				// REGISTROF550
+				if (!Util.isEmpty(registroF010.getRegistroF550())) {
+					registroF010.getRegistroF550().stream().forEach(registroF550 -> {
+						sb = GerarRegistroF550.gerar(registroF550, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF550);
+
+						// REGISTROF559
+						if (!Util.isEmpty(registroF550.getRegistroF559())) {
+							registroF550.getRegistroF559().stream().forEach(registroF559 -> {
+								sb = GerarRegistroF559.gerar(registroF559, sb);
+								efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF559);
+							});
+						}
+					});
+				}
+
+				// REGISTROF560
+				if (!Util.isEmpty(registroF010.getRegistroF560())) {
+					registroF010.getRegistroF560().stream().forEach(registroF560 -> {
+						sb = GerarRegistroF560.gerar(registroF560, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF560);
+
+						// REGISTROF569
+						if (!Util.isEmpty(registroF560.getRegistroF569())) {
+							registroF560.getRegistroF569().stream().forEach(registroF569 -> {
+								sb = GerarRegistroF569.gerar(registroF569, sb);
+								efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF569);
+							});
+						}
+					});
+				}
+
+				// REGISTROF600
+				if (!Util.isEmpty(registroF010.getRegistroF600())) {
+					registroF010.getRegistroF600().stream().forEach(registroF600 -> {
+						sb = GerarRegistroF600.gerar(registroF600, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF600);
+					});
+				}
+
+				// REGISTROF700
+				if (!Util.isEmpty(registroF010.getRegistroF700())) {
+					registroF010.getRegistroF700().stream().forEach(registroF700 -> {
+						sb = GerarRegistroF700.gerar(registroF700, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF700);
+					});
+				}
+
+				// REGISTROF800
+				if (!Util.isEmpty(registroF010.getRegistroF800())) {
+					registroF010.getRegistroF800().stream().forEach(registroF800 -> {
+						sb = GerarRegistroF800.gerar(registroF800, sb);
+						efdContribuicoes.getContadoresBlocoF().incrementar(BlocoFEnum.RegistroF800);
+					});
+				}
+
 			});
 		}
+
+		// REGISTROF990
+		if (efdContribuicoes.getContadoresBlocoF().getContRegistroF990() > 0) {
+			RegistroF990 registroF990 = new RegistroF990();
+			registroF990.setQtd_lin_f(String.valueOf(efdContribuicoes.getContadoresBlocoF().getContRegistroF990() + 1));
+
+			blocoF.setRegistroF990(registroF990);
+			sb = GerarRegistroF990.gerar(blocoF.getRegistroF990(), sb);
+		}
+
+		return sb;
 	}
 }

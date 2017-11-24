@@ -16,9 +16,9 @@ public class RegistroM610 {
 	private String cod_cont;
 	private String vl_rec_brt;
 	private String vl_bc_cont;
-	private String aliq_pis_percentual;
-	private String quant_bc_pis;
-	private String aliq_pis_reais;
+	private String aliq_cofins_percentual;
+	private String quant_bc_cofins;
+	private String aliq_cofins_reais;
 	private String vl_cont_apur;
 	private String vl_ajust_acres;
 	private String vl_ajust_reduc;
@@ -75,48 +75,48 @@ public class RegistroM610 {
 	}
 
 	/**
-	 * @return the aliq_pis_percentual
+	 * @return the aliq_cofins_percentual
 	 */
 	public String getAliq_cofins_percentual() {
-		return aliq_pis_percentual;
+		return aliq_cofins_percentual;
 	}
 
 	/**
-	 * @param aliq_pis_percentual
-	 *            the aliq_pis_percentual to set
+	 * @param aliq_cofins_percentual
+	 *            the aliq_cofins_percentual to set
 	 */
-	public void setAliq_pis_percentual(String aliq_pis_percentual) {
-		this.aliq_pis_percentual = aliq_pis_percentual;
+	public void setAliq_cofins_percentual(String aliq_cofins_percentual) {
+		this.aliq_cofins_percentual = aliq_cofins_percentual;
 	}
 
 	/**
-	 * @return the quant_bc_pis
+	 * @return the quant_bc_cofins
 	 */
 	public String getQuant_bc_cofins() {
-		return quant_bc_pis;
+		return quant_bc_cofins;
 	}
 
 	/**
-	 * @param quant_bc_pis
-	 *            the quant_bc_pis to set
+	 * @param quant_bc_cofins
+	 *            the quant_bc_cofins to set
 	 */
-	public void setQuant_bc_pis(String quant_bc_pis) {
-		this.quant_bc_pis = quant_bc_pis;
+	public void setQuant_bc_cofins(String quant_bc_cofins) {
+		this.quant_bc_cofins = quant_bc_cofins;
 	}
 
 	/**
-	 * @return the aliq_pis_reais
+	 * @return the aliq_cofins_reais
 	 */
 	public String getAliq_cofins_reais() {
-		return aliq_pis_reais;
+		return aliq_cofins_reais;
 	}
 
 	/**
-	 * @param aliq_pis_reais
-	 *            the aliq_pis_reais to set
+	 * @param aliq_cofins_reais
+	 *            the aliq_cofins_reais to set
 	 */
-	public void setAliq_pis_reais(String aliq_pis_reais) {
-		this.aliq_pis_reais = aliq_pis_reais;
+	public void setAliq_cofins_reais(String aliq_cofins_reais) {
+		this.aliq_cofins_reais = aliq_cofins_reais;
 	}
 
 	/**

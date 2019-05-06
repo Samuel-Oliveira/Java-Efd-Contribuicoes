@@ -109,7 +109,7 @@ public class ContadoresBlocoM {
 				contRegistroM515++;
 				break;
 			case RegistroM600:
-				contRegistroM605++;
+				contRegistroM600++;
 				break;
 			case RegistroM610:
 				contRegistroM610++;

@@ -35,6 +35,9 @@ public class ContadoresBlocoA {
 		case RegistroA100:
 			contRegistroA100++;
 			break;
+		case RegistroA110:
+			contRegistroA110++;
+			break;
 		case RegistroA111:
 			contRegistroA111++;
 			break;

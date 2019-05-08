@@ -1,39 +1,103 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.samuelweb</groupId>
+	<groupId>br.com.swconsultoria</groupId>
 	<artifactId>java-efd-contribuicoes</artifactId>
-	<version>1.28.0b</version>
+	<version>1.31.0-SNAPSHOT</version>
 	<name>Java Efd Contrbuicoes</name>
-	<!-- Repositorios SVN Autocom -->
-	<repositories>
-		<repository>
-			<name>Repositorio Autocom</name>
-			<id>Release</id>
-			<url>http://www.autocomsistemas.com.br:8081/nexus/content/repositories/autocom/</url>
-		</repository>
-	</repositories>
+    <description>API Java para gerar arquivo do Efd Contribuições</description>
+    <url>https://github.com/Samuel-Oliveira/Java-Efd-Icms</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-	<distributionManagement>
-		<repository>
-			<id>autocom</id>
-			<url>http://nexus.autocomsistemas.com.br/nexus/content/repositories/autocom/</url>
-		</repository>
-	</distributionManagement>
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <scm>
+        <url>https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes</url>
+        <connection>scm:git:git@github.com:Samuel-Oliveira/Java-Efd-Contribuicoes.git</connection>
+        <developerConnection>scm:git:git@github.com:Samuel-Oliveira/Java-Efd-Contribuicoes.git</developerConnection>
+        <tag>java-efd-icms-3.01.1-SNAPSHOT</tag>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <id>Samuel-Oliveira</id>
+            <name>Samuel Borges de Oliveira</name>
+            <url>https://github.com/Samuel-Oliveira</url>
+        </developer>
+        <developer>
+            <id>YuriLemes</id>
+            <name>Yuri Lemes</name>
+            <url>https://github.com/YuriLemes</url>
+        </developer>
+    </developers>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-staging</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

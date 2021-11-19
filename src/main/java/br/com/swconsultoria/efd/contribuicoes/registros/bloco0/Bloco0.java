@@ -21,7 +21,16 @@ public class Bloco0 {
 	private List<Registro0140> registro0140;
 	private List<Registro0500> registro0500;
 	private List<Registro0600> registro0600;
+	private Registro0900 registro0900;
 	private Registro0990 registro0990;
+
+	public Registro0900 getRegistro0900() {
+		return registro0900;
+	}
+
+	public void setRegistro0900(Registro0900 registro0900) {
+		this.registro0900 = registro0900;
+	}
 
 	/**
 	 * @return the registro0000

@@ -11,6 +11,7 @@ public enum Bloco1Enum {
 
 	Registro1001,
 	Registro1010,
+	Registro1011,
 	Registro1020,
 	Registro1050,
 	Registro1100,

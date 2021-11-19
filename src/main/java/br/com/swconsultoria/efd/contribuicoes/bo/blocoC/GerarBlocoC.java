@@ -270,7 +270,7 @@ public class GerarBlocoC {
 				// REGISTROC500
 				if (!Util.isEmpty(registroC010.getRegistroC500())) {
 					registroC010.getRegistroC500().forEach(registroC500 -> {
-						GerarRegistroC500.gerar(registroC500, sb);
+						GerarRegistroC500.gerar(efdContribuicoes,registroC500, sb);
 						efdContribuicoes.getContadoresBlocoC().incrementar(BlocoCEnum.RegistroC500);
 
 						// REGISTROC501

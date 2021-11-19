@@ -28,6 +28,7 @@ public enum Bloco0Enum {
 	Registro0450,
 	Registro0500,
 	Registro0600,
+	Registro0900,
 	Registro0990
 	
 }

@@ -11,7 +11,7 @@ Os Registros de Quantidade de Linhas e quantidades de Registros(Bloco 9) são ca
 
 
 Para Iniciar : 
-- Caso use Libs baixe o java-efd-contribuicoes-1.31.0.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.31.0.jar) e o adicione às bibliotecas de Seu Projeto.
+- Caso use Libs baixe o java-efd-contribuicoes-1.32.0.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.32.0.jar) e o adicione às bibliotecas de Seu Projeto.
 
 - Caso use Maven :
 ```

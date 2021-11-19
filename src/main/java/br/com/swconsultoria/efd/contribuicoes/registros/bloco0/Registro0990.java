@@ -9,7 +9,7 @@ package br.com.swconsultoria.efd.contribuicoes.registros.bloco0;
  */
 public class Registro0990 {
 
-	private final String reg = "";
+	private final String reg = "0990";
 	private String qtd_lin_0;
 
 	/**

@@ -20,14 +20,19 @@ public class GerarContadoresBloco1 {
         Bloco1 bloco1 = efdContribuicoes.getBloco1();
         Bloco9 bloco9 = efdContribuicoes.getBloco9();
 
-        int cont = 0;
-        cont = efdContribuicoes.getContadoresBloco1().getContRegistro1001();
+        int cont = efdContribuicoes.getContadoresBloco1().getContRegistro1001();
         if (cont > 0) {
             bloco9.getRegistro9900().add(New9900("1001", cont));
         }
         cont = efdContribuicoes.getContadoresBloco1().getContRegistro1010();
         if (cont > 0) {
             bloco9.getRegistro9900().add(New9900("1010", cont));
+        }
+        if (Util.versao2020(efdContribuicoes.getBloco0().getRegistro0000().getDt_ini())) {
+            cont = efdContribuicoes.getContadoresBloco1().getContRegistro1011();
+            if (cont > 0) {
+                bloco9.getRegistro9900().add(New9900("1011", cont));
+            }
         }
         cont = efdContribuicoes.getContadoresBloco1().getContRegistro1020();
         if (cont > 0) {
@@ -110,8 +115,8 @@ public class GerarContadoresBloco1 {
             bloco9.getRegistro9900().add(New9900("1990", 1));
         }
 
-        int somatorio = Integer.valueOf(bloco9.getRegistro9999().getQtd_lin())
-                + Integer.valueOf(bloco1.getRegistro1990().getQtd_lin_1());
+        int somatorio = Integer.parseInt(bloco9.getRegistro9999().getQtd_lin())
+                + Integer.parseInt(bloco1.getRegistro1990().getQtd_lin_1());
         bloco9.getRegistro9999().setQtd_lin(String.valueOf(somatorio));
 
         efdContribuicoes.setBloco9(bloco9);

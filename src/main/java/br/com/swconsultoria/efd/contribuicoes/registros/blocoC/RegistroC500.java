@@ -26,6 +26,7 @@ public class RegistroC500 {
 	private String cod_inf;
 	private String vl_pis;
 	private String vl_cofins;
+	private String chv_doc_e;
 	private List<RegistroC501> registroC501;
 	private List<RegistroC505> registroC505;
 	private List<RegistroC509> registroC509;
@@ -250,6 +251,14 @@ public class RegistroC500 {
 			registroC505 = new ArrayList<RegistroC505>();
 		}
 		return registroC505;
+	}
+
+	public String getChv_doc_e() {
+		return chv_doc_e;
+	}
+
+	public void setChv_doc_e(String chv_doc_e) {
+		this.chv_doc_e = chv_doc_e;
 	}
 
 	/**

@@ -3,6 +3,7 @@
  */
 package br.com.swconsultoria.efd.contribuicoes.bo.bloco0;
 
+import br.com.swconsultoria.efd.contribuicoes.registros.EfdContribuicoes;
 import br.com.swconsultoria.efd.contribuicoes.registros.bloco0.Registro0000;
 import br.com.swconsultoria.efd.contribuicoes.util.Util;
 
@@ -12,10 +13,10 @@ import br.com.swconsultoria.efd.contribuicoes.util.Util;
  */
 public class GerarRegistro0000 {
 
-public static StringBuilder gerar(Registro0000 registro0000, StringBuilder sb){
+public static StringBuilder gerar(EfdContribuicoes efdContribuicoes,Registro0000 registro0000, StringBuilder sb){
 		
 		sb.append("|").append(Util.preencheRegistro(registro0000.getReg()));
-		sb.append("|").append(Util.preencheRegistro(registro0000.getCod_ver()));
+		sb.append("|").append(Util.preencheRegistro(Util.getCodVersao(efdContribuicoes)));
 		sb.append("|").append(Util.preencheRegistro(registro0000.getTipo_escrit()));
 		sb.append("|").append(Util.preencheRegistro(registro0000.getInd_sit_esp()));
 		sb.append("|").append(Util.preencheRegistro(registro0000.getNum_rec_anterior()));

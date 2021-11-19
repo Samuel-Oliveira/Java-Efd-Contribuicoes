@@ -14,6 +14,7 @@ public class ContadoresBloco1 {
 	// BLOCO 1
 	private int contRegistro1001 = 0;
 	private int contRegistro1010 = 0;
+	private int contRegistro1011 = 0;
 	private int contRegistro1020 = 0;
 	private int contRegistro1050 = 0;
 	private int contRegistro1100 = 0;
@@ -45,6 +46,9 @@ public class ContadoresBloco1 {
 				break;
 			case Registro1010:
 				contRegistro1010++;
+				break;
+			case Registro1011:
+				contRegistro1011++;
 				break;
 			case Registro1020:
 				contRegistro1020++;
@@ -258,4 +262,8 @@ public class ContadoresBloco1 {
     public int getContRegistro1050() {
         return contRegistro1050;
     }
+
+	public int getContRegistro1011() {
+		return contRegistro1011;
+	}
 }

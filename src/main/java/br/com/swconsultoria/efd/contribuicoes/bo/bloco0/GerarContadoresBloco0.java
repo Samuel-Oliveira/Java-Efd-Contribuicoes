@@ -3,7 +3,6 @@
  */
 package br.com.swconsultoria.efd.contribuicoes.bo.bloco0;
 
-
 import br.com.swconsultoria.efd.contribuicoes.registros.EfdContribuicoes;
 import br.com.swconsultoria.efd.contribuicoes.registros.bloco0.Bloco0;
 import br.com.swconsultoria.efd.contribuicoes.registros.bloco9.Bloco9;
@@ -23,12 +22,10 @@ public class GerarContadoresBloco0 {
         Registro9999 registro9999 = new Registro9999();
         registro9999.setQtd_lin("0");
         bloco9.setRegistro9999(registro9999);
-        Registro9900 registro9900 = new Registro9900();
-
-        int cont = 0;
+        Registro9900 registro9900;
 
         // Qnt Registros Registro0000
-        cont = efdContribuicoes.getContadoresBloco0().getContRegistro0000();
+        int cont = efdContribuicoes.getContadoresBloco0().getContRegistro0000();
         if (cont > 0) {
             registro9900 = new Registro9900();
             registro9900.setReg_blc("0000");
@@ -199,6 +196,15 @@ public class GerarContadoresBloco0 {
             bloco9.getRegistro9900().add(registro9900);
 
         }
+        // Qnt Registros Registro0900
+        cont = efdContribuicoes.getContadoresBloco0().getContRegistro0900();
+        if (cont > 0) {
+            registro9900 = new Registro9900();
+            registro9900.setReg_blc("0900");
+            registro9900.setQtd_reg_blc(String.valueOf(cont));
+            bloco9.getRegistro9900().add(registro9900);
+
+        }
 
         // Qnt Registros Registro0990
         cont = efdContribuicoes.getContadoresBloco0().getContRegistro0990();
@@ -210,7 +216,7 @@ public class GerarContadoresBloco0 {
 
         }
 
-        int somatorio = Integer.valueOf(bloco9.getRegistro9999().getQtd_lin()) + Integer.valueOf(bloco0.getRegistro0990().getQtd_lin_0());
+        int somatorio = Integer.parseInt(bloco9.getRegistro9999().getQtd_lin()) + Integer.parseInt(bloco0.getRegistro0990().getQtd_lin_0());
         bloco9.getRegistro9999().setQtd_lin(String.valueOf(somatorio));
 
         efdContribuicoes.setBloco9(bloco9);

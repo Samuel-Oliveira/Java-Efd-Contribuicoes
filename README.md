@@ -2,9 +2,10 @@
 Projeto Para implementação de Efd-Contribuições(Escrituação Fiscal Digital Pis/Cofins) em ambientes Java de Forma Facilitada.
 
 ## Dúvidas, Sugestões ou Consultoria
-Entre no Discord do Projeto: https://discord.gg/ZXpqnaV
+[![Java Brasil](https://discordapp.com/api/guilds/519583346066587676/widget.png?style=banner2)](https://discord.gg/ZXpqnaV)
 
-## Gostou do Projeto? Dê sua colaboração: [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TX9K693QQYA6W)
+## Gostou do Projeto? Dê sua colaboração pelo Pix: 01713390108
+<img src="https://swconsultoria.com.br/pix.png" width="200">
 
 A Lib abstrai toda a geração dos registros, sendo necessario apenas o preenchimento dos mesmos.
 Os Registros de Quantidade de Linhas e quantidades de Registros(Bloco 9) são calculados e gerados automaticamente pela Lib.

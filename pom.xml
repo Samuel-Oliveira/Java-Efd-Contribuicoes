@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.swconsultoria</groupId>
 	<artifactId>java-efd-contribuicoes</artifactId>
-	<version>1.32.0</version>
+	<version>1.32.1-SNAPSHOT</version>
 	<name>Java Efd Contrbuicoes</name>
     <description>API Java para gerar arquivo do Efd Contribuições</description>
     <url>https://github.com/Samuel-Oliveira/Java-Efd-Icms</url>
@@ -18,7 +18,7 @@
         <url>https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes</url>
         <connection>scm:git:git@github.com:Samuel-Oliveira/Java-Efd-Contribuicoes.git</connection>
         <developerConnection>scm:git:git@github.com:Samuel-Oliveira/Java-Efd-Contribuicoes.git</developerConnection>
-        <tag>java-efd-contribuicoes-1.32.0</tag>
+        <tag>java-efd-icms-3.01.1-SNAPSHOT</tag>
     </scm>
 
     <properties>

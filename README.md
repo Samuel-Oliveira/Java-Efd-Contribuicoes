@@ -1,4 +1,4 @@
-# Java-Efd-Contribuicoes [![Build Status](https://travis-ci.org/Samuel-Oliveira/Java-Efd-Contribuicoes.svg?branch=master)](https://travis-ci.org/Samuel-Oliveira/Java-Efd-Contribuicoes) [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.31.0/jar)
+# Java-Efd-Contribuicoes [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.32.0/jar)
 Projeto Para implementação de Efd-Contribuições(Escrituação Fiscal Digital Pis/Cofins) em ambientes Java de Forma Facilitada.
 
 ## Dúvidas, Sugestões ou Consultoria
@@ -18,7 +18,7 @@ Para Iniciar :
 <dependency>
   <groupId>br.com.swconsultoria</groupId>
   <artifactId>java-efd-contribuicoes</artifactId>
-  <version>1.31.0</version>
+  <version>1.32.0</version>
 </dependency>
 ```
 
@@ -26,6 +26,9 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/wiki, para
 ________________________________________________________________________________________________
 
 # Historico de Versões
+
+## v1.32.0 - 27/07/2023
+- Re Upado para Maven
 
 ## v1.31.0 - 08/05/2019
 - Disponibilizado para Comunidade

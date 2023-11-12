@@ -1,4 +1,4 @@
-# Java-Efd-Contribuicoes [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.32.0/jar)
+# Java-Efd-Contribuicoes [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.32.1/jar)
 Projeto Para implementação de Efd-Contribuições(Escrituação Fiscal Digital Pis/Cofins) em ambientes Java de Forma Facilitada.
 
 ## Dúvidas, Sugestões ou Consultoria
@@ -12,14 +12,14 @@ Os Registros de Quantidade de Linhas e quantidades de Registros(Bloco 9) são ca
 
 
 Para Iniciar : 
-- Caso use Libs baixe o java-efd-contribuicoes-1.32.0.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.32.0.jar) e o adicione às bibliotecas de Seu Projeto.
+- Caso use Libs baixe o java-efd-contribuicoes-1.32.1.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.32.1.jar) e o adicione às bibliotecas de Seu Projeto.
 
 - Caso use Maven :
 ```
 <dependency>
   <groupId>br.com.swconsultoria</groupId>
   <artifactId>java-efd-contribuicoes</artifactId>
-  <version>1.32.0</version>
+  <version>1.32.1</version>
 </dependency>
 ```
 
@@ -27,6 +27,9 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/wiki, para
 ________________________________________________________________________________________________
 
 # Historico de Versões
+
+## v1.32.1 - 12/11/2023
+- Corrigido VL_CRED_APU duplicado - Registro 1100
 
 ## v1.32.0 - 27/07/2023
 - Re Upado para Maven

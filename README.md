@@ -1,4 +1,4 @@
-# Java-Efd-Contribuicoes [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.32.1/jar)
+# Java-Efd-Contribuicoes [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java-Efd-Contribuicoes.svg) ](https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-efd-contribuicoes.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-efd-contribuicoes/1.32.2/jar)
 Projeto Para implementação de Efd-Contribuições(Escrituação Fiscal Digital Pis/Cofins) em ambientes Java de Forma Facilitada.
 
 ## Dúvidas, Sugestões ou Consultoria
@@ -12,14 +12,14 @@ Os Registros de Quantidade de Linhas e quantidades de Registros(Bloco 9) são ca
 
 
 Para Iniciar : 
-- Caso use Libs baixe o java-efd-contribuicoes-1.32.1.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.32.1.jar) e o adicione às bibliotecas de Seu Projeto.
+- Caso use Libs baixe o java-efd-contribuicoes-1.32.2.jar (https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/raw/master/java-efd-contribuicoes-1.32.2.jar) e o adicione às bibliotecas de Seu Projeto.
 
 - Caso use Maven :
 ```
 <dependency>
   <groupId>br.com.swconsultoria</groupId>
   <artifactId>java-efd-contribuicoes</artifactId>
-  <version>1.32.1</version>
+  <version>1.32.2</version>
 </dependency>
 ```
 
@@ -27,6 +27,9 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java-Efd-Contribuicoes/wiki, para
 ________________________________________________________________________________________________
 
 # Historico de Versões
+
+## v1.32.2 - 26/09/2026
+- Corrigida condição de corrida: as classes internas de geração de bloco (`GerarBloco0/1/9/A/C/D/F/I/M/P`) guardavam o acumulador de saída e o contador do Bloco 9 em campos `static`, então duas gerações simultâneas na mesma JVM podiam trocar linhas entre si ou corromper a contagem de `QTD_LIN_9`. Os campos foram removidos e o estado passou a ser local a cada chamada. Não há mudança de API nem de comportamento em uso sequencial: a saída gerada é byte a byte idêntica à da versão 1.32.1.
 
 ## v1.32.1 - 12/11/2023
 - Corrigido VL_CRED_APU duplicado - Registro 1100

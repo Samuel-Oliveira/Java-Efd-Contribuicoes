@@ -15,28 +15,26 @@ import br.com.swconsultoria.efd.contribuicoes.util.Util;
  */
 public class GerarBlocoM {
 
-	private static StringBuilder sb = null;
 
 	public static StringBuilder gerar(EfdContribuicoes efdContribuicoes, StringBuilder sbr) {
 		BlocoM blocoM = efdContribuicoes.getBlocoM();
-		sb = sbr;
 
 		// REGISTROM001
 		if (!Util.isEmpty(blocoM.getRegistroM001())) {
-			GerarRegistroM001.gerar(blocoM.getRegistroM001(), sb);
+			GerarRegistroM001.gerar(blocoM.getRegistroM001(), sbr);
 			efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM001);
 		}
 
 		// REGISTROM100
 		if (!Util.isEmpty(blocoM.getRegistroM100())) {
 			blocoM.getRegistroM100().forEach(registroM100 -> {
-				GerarRegistroM100.gerar(registroM100, sb);
+				GerarRegistroM100.gerar(registroM100, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM100);
 
 				// REGISTROM105
 				if (!Util.isEmpty(registroM100.getRegistroM105())) {
 					registroM100.getRegistroM105().forEach(registroM105 -> {
-						GerarRegistroM105.gerar(registroM105, sb);
+						GerarRegistroM105.gerar(registroM105, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM105);
 					});
 				}
@@ -44,13 +42,13 @@ public class GerarBlocoM {
 				// REGISTROM110
 				if (!Util.isEmpty(registroM100.getRegistroM110())) {
 					registroM100.getRegistroM110().forEach(registroM110 -> {
-						GerarRegistroM110.gerar(registroM110, sb);
+						GerarRegistroM110.gerar(registroM110, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM110);
 
 						// REGISTROM115
 						if (!Util.isEmpty(registroM110.getRegistroM115())) {
 							registroM110.getRegistroM115().forEach(registroM115 -> {
-								GerarRegistroM115.gerar(registroM115, sb);
+								GerarRegistroM115.gerar(registroM115, sbr);
 								efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM115);
 							});
 						}
@@ -61,13 +59,13 @@ public class GerarBlocoM {
 
 		// REGISTROM200
 		if (!Util.isEmpty(blocoM.getRegistroM200())) {
-			GerarRegistroM200.gerar(blocoM.getRegistroM200(), sb);
+			GerarRegistroM200.gerar(blocoM.getRegistroM200(), sbr);
 			efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM200);
 
 			// REGISTROM205
 			if (!Util.isEmpty(blocoM.getRegistroM200().getRegistroM205())) {
 				blocoM.getRegistroM200().getRegistroM205().forEach(registroM205 -> {
-					GerarRegistroM205.gerar(registroM205, sb);
+					GerarRegistroM205.gerar(registroM205, sbr);
 					efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM205);
 				});
 			}
@@ -75,19 +73,19 @@ public class GerarBlocoM {
 			// REGISTROM210
 			if (!Util.isEmpty(blocoM.getRegistroM200().getRegistroM210())) {
 				blocoM.getRegistroM200().getRegistroM210().forEach(registroM210 -> {
-					GerarRegistroM210.gerar(registroM210, sb);
+					GerarRegistroM210.gerar(registroM210, sbr);
 					efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM210);
 
 					// REGISTROM211
 					if (!Util.isEmpty(registroM210.getRegistroM211())) {
-						GerarRegistroM211.gerar(registroM210.getRegistroM211(), sb);
+						GerarRegistroM211.gerar(registroM210.getRegistroM211(), sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM211);
 					}
 
                     // REGISTROM215
                     if (!Util.isEmpty(registroM210.getRegistroM215())) {
                         registroM210.getRegistroM215().forEach(registroM215 -> {
-                            GerarRegistroM215.gerar(registroM215, sb);
+                            GerarRegistroM215.gerar(registroM215, sbr);
                             efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM215);
                         });
                     }
@@ -95,13 +93,13 @@ public class GerarBlocoM {
                     // REGISTROM220
                     if (!Util.isEmpty(registroM210.getRegistroM220())) {
                         registroM210.getRegistroM220().forEach(registroM220 -> {
-                            GerarRegistroM220.gerar(registroM220, sb);
+                            GerarRegistroM220.gerar(registroM220, sbr);
                             efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM220);
 
                             // REGISTROM225
                             if (!Util.isEmpty(registroM220.getRegistroM225())) {
                                 registroM220.getRegistroM225().forEach(registroM225 -> {
-                                    GerarRegistroM225.gerar(registroM225, sb);
+                                    GerarRegistroM225.gerar(registroM225, sbr);
                                     efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM225);
                                 });
                             }
@@ -111,7 +109,7 @@ public class GerarBlocoM {
                     // REGISTROM230
                     if (!Util.isEmpty(registroM210.getRegistroM230())) {
                         registroM210.getRegistroM230().forEach(registroM230 -> {
-                            GerarRegistroM230.gerar(registroM230, sb);
+                            GerarRegistroM230.gerar(registroM230, sbr);
                             efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM230);
                         });
                     }
@@ -122,27 +120,27 @@ public class GerarBlocoM {
 		// REGISTROM300
 		if (!Util.isEmpty(blocoM.getRegistroM300())) {
 			blocoM.getRegistroM300().forEach(registroM300 -> {
-				GerarRegistroM300.gerar(registroM300, sb);
+				GerarRegistroM300.gerar(registroM300, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM300);
 			});
 		}
 
 		// REGISTROM350
 		if (!Util.isEmpty(blocoM.getRegistroM350())) {
-			GerarRegistroM350.gerar(blocoM.getRegistroM350(), sb);
+			GerarRegistroM350.gerar(blocoM.getRegistroM350(), sbr);
 			efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM350);
 		}
 
 		// REGISTROM400
 		if (!Util.isEmpty(blocoM.getRegistroM400())) {
 			blocoM.getRegistroM400().forEach(registroM400 -> {
-				GerarRegistroM400.gerar(registroM400, sb);
+				GerarRegistroM400.gerar(registroM400, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM400);
 
 				// REGISTROM410
 				if (!Util.isEmpty(registroM400.getRegistroM410())) {
 					registroM400.getRegistroM410().forEach(registroM410 -> {
-						GerarRegistroM410.gerar(registroM410, sb);
+						GerarRegistroM410.gerar(registroM410, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM410);
 					});
 				}
@@ -152,13 +150,13 @@ public class GerarBlocoM {
 		// REGISTROM500
 		if (!Util.isEmpty(blocoM.getRegistroM500())) {
 			blocoM.getRegistroM500().forEach(registroM500 -> {
-				GerarRegistroM500.gerar(registroM500, sb);
+				GerarRegistroM500.gerar(registroM500, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM500);
 
 				// REGISTROM505
 				if (!Util.isEmpty(registroM500.getRegistroM505())) {
 					registroM500.getRegistroM505().forEach(registroM505 -> {
-						GerarRegistroM505.gerar(registroM505, sb);
+						GerarRegistroM505.gerar(registroM505, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM505);
 					});
 				}
@@ -166,13 +164,13 @@ public class GerarBlocoM {
 				// REGISTROM510
 				if (!Util.isEmpty(registroM500.getRegistroM510())) {
 					registroM500.getRegistroM510().forEach(registroM510 -> {
-						GerarRegistroM510.gerar(registroM510, sb);
+						GerarRegistroM510.gerar(registroM510, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM510);
 
 						// REGISTROM515
 						if (!Util.isEmpty(registroM510.getRegistroM515())) {
 							registroM510.getRegistroM515().forEach(registroM515 -> {
-								GerarRegistroM515.gerar(registroM515, sb);
+								GerarRegistroM515.gerar(registroM515, sbr);
 								efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM515);
 							});
 						}
@@ -183,13 +181,13 @@ public class GerarBlocoM {
 
 		// REGISTROM600
 		if (!Util.isEmpty(blocoM.getRegistroM600())) {
-			GerarRegistroM600.gerar(blocoM.getRegistroM600(), sb);
+			GerarRegistroM600.gerar(blocoM.getRegistroM600(), sbr);
 			efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM600);
 
 			// REGISTROM605
 			if (!Util.isEmpty(blocoM.getRegistroM600().getRegistroM605())) {
 				blocoM.getRegistroM600().getRegistroM605().forEach(registroM605 -> {
-					GerarRegistroM605.gerar(registroM605, sb);
+					GerarRegistroM605.gerar(registroM605, sbr);
 					efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM605);
 				});
 			}
@@ -197,19 +195,19 @@ public class GerarBlocoM {
 			// REGISTROM610
 			if (!Util.isEmpty(blocoM.getRegistroM600().getRegistroM610())) {
 				blocoM.getRegistroM600().getRegistroM610().forEach(registroM610 -> {
-					GerarRegistroM610.gerar(registroM610, sb);
+					GerarRegistroM610.gerar(registroM610, sbr);
 					efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM610);
 
 					// REGISTROM611
 					if (!Util.isEmpty(registroM610.getRegistroM611())) {
-						GerarRegistroM611.gerar(registroM610.getRegistroM611(), sb);
+						GerarRegistroM611.gerar(registroM610.getRegistroM611(), sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM611);
 					}
 
                     // REGISTROM615
                     if (!Util.isEmpty(registroM610.getRegistroM615())) {
                         registroM610.getRegistroM615().forEach(registroM615 -> {
-                            GerarRegistroM615.gerar(registroM615, sb);
+                            GerarRegistroM615.gerar(registroM615, sbr);
                             efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM615);
                         });
                     }
@@ -218,13 +216,13 @@ public class GerarBlocoM {
 					if (!Util.isEmpty(registroM610.getRegistroM620())) {
 						registroM610.getRegistroM620().forEach(registroM620 -> {
 
-							GerarRegistroM620.gerar(registroM620, sb);
+							GerarRegistroM620.gerar(registroM620, sbr);
 							efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM620);
 
 							// REGISTROM625
 							if (!Util.isEmpty(registroM620.getRegistroM625())) {
 								registroM620.getRegistroM625().forEach(registroM625 -> {
-									GerarRegistroM625.gerar(registroM625, sb);
+									GerarRegistroM625.gerar(registroM625, sbr);
 									efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM625);
 								});
 							}
@@ -234,7 +232,7 @@ public class GerarBlocoM {
 					// REGISTROM630
 					if (!Util.isEmpty(registroM610.getRegistroM630())) {
 						registroM610.getRegistroM630().forEach(registroM630 -> {
-							GerarRegistroM630.gerar(registroM630, sb);
+							GerarRegistroM630.gerar(registroM630, sbr);
 							efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM630);
 						});
 					}
@@ -245,7 +243,7 @@ public class GerarBlocoM {
 		// REGISTROM700
 		if (!Util.isEmpty(blocoM.getRegistroM700())) {
 			blocoM.getRegistroM700().forEach(registroM700 -> {
-				GerarRegistroM700.gerar(registroM700, sb);
+				GerarRegistroM700.gerar(registroM700, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM700);
 			});
 		}
@@ -253,13 +251,13 @@ public class GerarBlocoM {
 		// REGISTROM800
 		if (!Util.isEmpty(blocoM.getRegistroM800())) {
 			blocoM.getRegistroM800().forEach(registroM800 -> {
-				GerarRegistroM800.gerar(registroM800, sb);
+				GerarRegistroM800.gerar(registroM800, sbr);
 				efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM800);
 
 				// REGISTROM810
 				if (!Util.isEmpty(registroM800.getRegistroM810())) {
 					registroM800.getRegistroM810().forEach(registroM810 -> {
-						GerarRegistroM810.gerar(registroM810, sb);
+						GerarRegistroM810.gerar(registroM810, sbr);
 						efdContribuicoes.getContadoresBlocoM().incrementar(BlocoMEnum.RegistroM810);
 					});
 				}
@@ -272,9 +270,9 @@ public class GerarBlocoM {
 			registroM990.setQtd_lin_m(String.valueOf(efdContribuicoes.getContadoresBlocoM().getContRegistroM990() + 1));
 
 			blocoM.setRegistroM990(registroM990);
-			GerarRegistroM990.gerar(blocoM.getRegistroM990(), sb);
+			GerarRegistroM990.gerar(blocoM.getRegistroM990(), sbr);
 		}
 
-		return sb;
+		return sbr;
 	}
 }

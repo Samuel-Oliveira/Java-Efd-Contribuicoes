@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.swconsultoria</groupId>
 	<artifactId>java-efd-contribuicoes</artifactId>
-	<version>1.32.2-SNAPSHOT</version>
+	<version>1.32.2</version>
 	<name>Java Efd Contrbuicoes</name>
     <description>API Java para gerar arquivo do Efd Contribuições</description>
     <url>https://github.com/Samuel-Oliveira/Java-Efd-Icms</url>
@@ -28,6 +28,15 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.13.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <distributionManagement>
         <snapshotRepository>
@@ -129,12 +138,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <argLine>
-                        -javaagent:src/test/resources/agent.jar
-                    </argLine>
-                </configuration>
+                <version>3.5.3</version>
             </plugin>
         </plugins>
     </build>

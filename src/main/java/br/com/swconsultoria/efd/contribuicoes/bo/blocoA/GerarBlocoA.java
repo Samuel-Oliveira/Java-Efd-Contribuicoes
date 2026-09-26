@@ -15,35 +15,33 @@ import br.com.swconsultoria.efd.contribuicoes.util.Util;
  */
 public class GerarBlocoA {
 
-	private static StringBuilder sb = null;
 
 	public static StringBuilder gerar(EfdContribuicoes efdContribuicoes, StringBuilder sbr) {
 		BlocoA blocoA = efdContribuicoes.getBlocoA();
 
-		sb = sbr;
 
 		// REGISTROA001
 		if (!Util.isEmpty(blocoA.getRegistroA001())) {
-			GerarRegistroA001.gerar(blocoA.getRegistroA001(), sb);
+			GerarRegistroA001.gerar(blocoA.getRegistroA001(), sbr);
 			efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA001);
 		}
 
 		// REGISTROA010
 		if (!Util.isEmpty(blocoA.getRegistroA010())) {
 			blocoA.getRegistroA010().forEach(registroA010 -> {
-				GerarRegistroA010.gerar(registroA010, sb);
+				GerarRegistroA010.gerar(registroA010, sbr);
 				efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA010);
 
 				// REGISTROA100
 				if (!Util.isEmpty(registroA010.getRegistroA100())) {
 					registroA010.getRegistroA100().forEach(registroA100 -> {
-						GerarRegistroA100.gerar(registroA100, sb);
+						GerarRegistroA100.gerar(registroA100, sbr);
 						efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA100);
 
 						// REGISTROA110
 						if (!Util.isEmpty(registroA100.getRegistroA110())) {
 							registroA100.getRegistroA110().forEach(registroA110 -> {
-								GerarRegistroA110.gerar(registroA110, sb);
+								GerarRegistroA110.gerar(registroA110, sbr);
 								efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA110);
 							});
 						}
@@ -51,7 +49,7 @@ public class GerarBlocoA {
 						// REGISTROA111
 						if (!Util.isEmpty(registroA100.getRegistroA111())) {
 							registroA100.getRegistroA111().forEach(registroA111 -> {
-								GerarRegistroA111.gerar(registroA111, sb);
+								GerarRegistroA111.gerar(registroA111, sbr);
 								efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA111);
 							});
 						}
@@ -59,7 +57,7 @@ public class GerarBlocoA {
 						// REGISTROA120
 						if (!Util.isEmpty(registroA100.getRegistroA120())) {
 							registroA100.getRegistroA120().forEach(registroA120 -> {
-								GerarRegistroA120.gerar(registroA120, sb);
+								GerarRegistroA120.gerar(registroA120, sbr);
 								efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA120);
 							});
 						}
@@ -67,7 +65,7 @@ public class GerarBlocoA {
 						// REGISTROA170
 						if (!Util.isEmpty(registroA100.getRegistroA170())) {
 							registroA100.getRegistroA170().forEach(registroA170 -> {
-								GerarRegistroA170.gerar(registroA170, sb);
+								GerarRegistroA170.gerar(registroA170, sbr);
 								efdContribuicoes.getContadoresBlocoA().incrementar(BlocoAEnum.RegistroA170);
 							});
 						}
@@ -82,9 +80,9 @@ public class GerarBlocoA {
 			registroA990.setQtd_lin_a(String.valueOf(efdContribuicoes.getContadoresBlocoA().getContRegistroA990() + 1));
 
 			blocoA.setRegistroA990(registroA990);
-			GerarRegistroA990.gerar(blocoA.getRegistroA990(), sb);
+			GerarRegistroA990.gerar(blocoA.getRegistroA990(), sbr);
 		}
 
-		return sb;
+		return sbr;
 	}
 }
